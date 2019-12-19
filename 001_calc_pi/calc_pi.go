@@ -13,7 +13,7 @@ import (
 func main() {
 
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Println("How many digits of Pi do you want? ")
+	fmt.Println("How many digits of Pi do you want? (Limit 100)")
 	text, _ := reader.ReadString('\n')
 
 	text = strings.TrimSuffix(text, "\n")
@@ -26,6 +26,10 @@ func main() {
 }
 
 func getPi(numberofdigits int64) string {
+
+	if numberofdigits > 100 {
+		numberofdigits = 100
+	}
 
 	digits := big.NewInt(500+10)
 	unity := big.NewInt(0)
