@@ -1,4 +1,4 @@
-package calcpi
+package main
 
 import (
 	"bufio"
