@@ -2,10 +2,7 @@ package main
 
 import (
 	"fmt"
-	"bufio"
-	"os"
 	"strconv"
-	"strings"
 	I "../lib"
 )
 
