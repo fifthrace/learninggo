@@ -3,16 +3,16 @@ package main
 import (
 	"fmt"
 	"strconv"
-	I "../lib"
+	"../pkg/rbinput"
 )
 
 func main() {
 
-	price, _ := strconv.ParseFloat(I.GetInput("Enter cost per square unit: "), 64)
+	price, _ := strconv.ParseFloat(rbinput.GetInput("Enter cost per square unit: "), 64)
 
-	h, _ := strconv.ParseFloat(I.GetInput("Enter height in units: "), 64)
+	h, _ := strconv.ParseFloat(rbinput.GetInput("Enter height in units: "), 64)
 
-	w, _ := strconv.ParseFloat(I.GetInput("Enter width in units: "), 64)
+	w, _ := strconv.ParseFloat(rbinput.GetInput("Enter width in units: "), 64)
 
 	totalCost, _ := calcCost(price, h, w)
 
