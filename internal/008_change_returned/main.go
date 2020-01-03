@@ -25,10 +25,9 @@ func main() {
 	p := fmt.Println
 	p("Welcome to the Change Return Application")
 
-	//t, _ := strconv.ParseFloat(in.GetInput("Enter the total amount charged? "), 64)
-	//g, _ := strconv.ParseFloat(in.GetInput("Enter the total money given? "), 64)
-	t := 123.00
-	g := 500.26
+	t, _ := strconv.ParseFloat(in.GetInput("Enter the total amount charged? "), 64)
+	g, _ := strconv.ParseFloat(in.GetInput("Enter the total money given? "), 64)
+
 	b := false
 
 	p("Change due: ", g-t)
