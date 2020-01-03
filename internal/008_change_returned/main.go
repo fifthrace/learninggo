@@ -1,7 +1,7 @@
 package main
 
 import (
-	"../pkg/rbinput"
+	in "../../pkg/rbinput"
 	"fmt"
 	"strconv"
 )
@@ -23,8 +23,8 @@ type change struct {
 func main() {
 	fmt.Println("Welcome to the Change Return Application\n")
 
-	t, _ := strconv.ParseFloat(rbinput.GetInput("Enter the total amount charged? "), 64)
-	g, _ := strconv.ParseFloat(rbinput.GetInput("Enter the total money given? "), 64)
+	t, _ := strconv.ParseFloat(in.GetInput("Enter the total amount charged? "), 64)
+	g, _ := strconv.ParseFloat(in.GetInput("Enter the total money given? "), 64)
 
 	ch := calculateChange(t, g)
 
