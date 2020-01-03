@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"../pkg/rbinput"
+	in "../../pkg/rbinput"
 	"strconv"
 	"math"
 )
@@ -10,9 +10,9 @@ import (
 func main() {
 	fmt.Println("Welcome to the Mortgage Calculator Application\n")
 
-	p, _ := strconv.ParseFloat(rbinput.GetInput("What is the principal amount? "), 64)
-	r, _ := strconv.ParseFloat(rbinput.GetInput("What is your annual interest percentage rage? "), 64)
-	t, _ := strconv.ParseFloat(rbinput.GetInput("How many years is the term? "), 64)
+	p, _ := strconv.ParseFloat(in.GetInput("What is the principal amount? "), 64)
+	r, _ := strconv.ParseFloat(in.GetInput("What is your annual interest percentage rage? "), 64)
+	t, _ := strconv.ParseFloat(in.GetInput("How many years is the term? "), 64)
 	//compounded daily by default
 	m := getMonthlyPayment(p,r,t)
 
